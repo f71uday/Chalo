@@ -35,8 +35,8 @@ public class RouteViewAdapter extends RecyclerView.Adapter<RouteViewAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         RouteList routeView = routeViewList.get(position);
         holder.routeName.setText(routeView.getRouteName());
-//        holder.startStop.setText(routeView.getStopDataList().get(1).getStopName());
-//        holder.endStop.setText(routeView.getStopDataList().get(routeView.getStopDataList().size()-1).getStopName());
+       holder.startStop.setText(routeView.getStopDataList().get(1).getStopName());
+        holder.endStop.setText(routeView.getStopDataList().get(routeView.getStopDataList().size()-1).getStopName());
 //       // ArrayAdapter<StopDataList> dataAdapter = new ArrayAdapter<StopDataList>(, android.R.layout.simple_spinner_item, routeViewList.get(position).getStopDataList());
 
     }
@@ -59,8 +59,7 @@ public class RouteViewAdapter extends RecyclerView.Adapter<RouteViewAdapter.MyVi
             routeName = (TextView) view.findViewById(R.id.route_name);
             startStop = (TextView) view.findViewById(R.id.start_stop);
             endStop = (TextView) view.findViewById(R.id.end_stop);
-//            startSpinner = (Spinner) view.findViewById(R.id.start_spinner);
-//            stopSpinner = (Spinner)view.findViewById(R.id.start_spinner);
+            
 
         }
     }
